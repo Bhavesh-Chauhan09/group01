@@ -43,7 +43,7 @@ const AccountSettings = () => {
         return;
       }
 
-      const response = await fetch('https://group01.onrender.com/api/users/account-settings/update-settings', {
+      const response = await fetch('https://group01-1.onrender.com/api/users/account-settings/update-settings', {
         method: 'PUT',
         headers: {
           'Authorization': user.token,
