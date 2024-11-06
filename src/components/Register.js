@@ -20,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/register', formData);
+      const res = await axios.post('https://group01.onrender.com/api/users/register', formData);
       console.log('User registered:', res.data);
       
       // Redirect to login page after successful registration
