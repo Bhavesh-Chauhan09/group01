@@ -13,11 +13,11 @@ const Login = ({ setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://group01-1.onrender.com//api/users/login', { email, password });
+      const res = await axios.post('https://group01-1.onrender.com/api/users/login', { email, password });
       const { username, _id, token } = res.data; // Make sure to include the token from the response
 
       // Fetch user settings after successful login
-      const settingsRes = await axios.get(`http://localhost:5000/api/users/account-settings/${_id}`, {
+      const settingsRes = await axios.get(`https://group01-1.onrender.com/api/users/account-settings/${_id}`, {
         headers: { 'Authorization': token } // Include the token for authorization
       });
 
