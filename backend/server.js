@@ -8,8 +8,11 @@ const app = express();
 
 // Middleware
 app.use(express.json()); // To handle JSON payloads
-app.use(cors()); // To allow cross-origin requests
-
+app.use(cors({
+    origin: '*',  // or use "*" for all origins (not recommended in production)
+    methods: ['GET', 'POST', 'DELETE','PATCH'],       // Add other methods if needed
+    credentials: true,
+  }));
 // Log the MongoDB URI to verify it's being loaded
 const mongoURI = process.env.MONGO_URI;
 if (!mongoURI) {
