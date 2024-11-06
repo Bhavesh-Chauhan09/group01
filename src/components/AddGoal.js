@@ -31,7 +31,7 @@ const AddGoal = ({ userId, fetchGoals }) => {
       if (totalGoals) goalData.totalgoals = Number(totalGoals);
       if (progress) goalData.progress = Number(progress);
 
-      const response = await fetch('https://group01-1.onrender.com//api/goals', {
+      const response = await fetch('https://group01-1.onrender.com/api/goals', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
