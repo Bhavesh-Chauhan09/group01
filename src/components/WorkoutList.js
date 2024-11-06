@@ -74,7 +74,7 @@ const WorkoutList = ({ userId }) => {
 
   const handleDeleteWorkout = async (workoutId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/workouts/${workoutId}`);
+      await axios.delete(`https://group01-1.onrender.com/api/workouts/${workoutId}`);
       const deletedWorkout = workouts.find(workout => workout._id === workoutId);
       
       setWorkouts(prevWorkouts => prevWorkouts.filter(workout => workout._id !== workoutId));
