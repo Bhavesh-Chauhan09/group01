@@ -20,7 +20,7 @@ const AddWorkout = ({ userId, onWorkoutAdded }) => {
     };
 
     try {
-      const response = await axios.post(`https://group01.onrender.com/api/workouts`, newWorkout);
+      const response = await axios.post(`https://group01-1.onrender.com/api/workouts`, newWorkout);
       onWorkoutAdded(response.data);
     } catch (err) {
       console.error('Error adding workout:', err);
