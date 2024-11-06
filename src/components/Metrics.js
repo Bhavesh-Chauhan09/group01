@@ -35,7 +35,7 @@ const Metrics = () => {
 
     const fetchMetrics = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/metrics/calculate/${userId}`);
+        const res = await axios.get(`https://group01.onrender.com/api/metrics/calculate/${userId}`);
         const { totalDistance, caloriesBurned, weightLost } = res.data;
 
         setMetricsData({
