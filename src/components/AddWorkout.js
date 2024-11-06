@@ -14,7 +14,7 @@ const AddWorkout = ({ userId, onWorkoutAdded }) => {
     e.preventDefault();
     try {
       const newWorkout = { title, duration, date, type, weight, userId };
-      const res = await axios.post('http://localhost:5000/api/workouts', newWorkout);
+      const res = await axios.post('https://group01.onrender.com/api/workouts', newWorkout);
       onWorkoutAdded(res.data);
       // Reset form fields
       setTitle('');
