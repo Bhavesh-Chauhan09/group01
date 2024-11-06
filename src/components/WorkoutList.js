@@ -36,7 +36,7 @@ const WorkoutList = ({ userId }) => {
       if (!userId) return;
       console.log("Fetching workouts for userId:", userId);
       try {
-        const response = await axios.get(`https://group01.onrender.com/api/workouts/${userId}`);
+        const response = await axios.get(`https://group01-1.onrender.com/api/workouts/${userId}`);
         setWorkouts(response.data);
 
         // Prepare data for weight chart
