@@ -20,7 +20,7 @@ const Goals = ({ userId }) => {
 
   const fetchGoals = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/goals/${userId}`);
+      const response = await fetch(`https://group01.onrender.com/goals/${userId}`);
       if (response.ok) {
         const data = await response.json();
 
