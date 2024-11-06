@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json()); // To handle JSON payloads
 app.use(cors({
     origin: '*',  // or use "*" for all origins (not recommended in production)
-    methods: ['GET', 'POST', 'DELETE','PATCH'],       // Add other methods if needed
+    methods: ['GET', 'POST', 'DELETE','PATCH','PUT'],       // Add other methods if needed
     credentials: true,
   }));
 // Log the MongoDB URI to verify it's being loaded
