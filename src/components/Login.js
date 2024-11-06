@@ -13,7 +13,7 @@ const Login = ({ setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', { email, password });
+      const res = await axios.post('https://group01.onrender.com/api/users/login', { email, password });
       const { username, _id, token } = res.data; // Make sure to include the token from the response
 
       // Fetch user settings after successful login
