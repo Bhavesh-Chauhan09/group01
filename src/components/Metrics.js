@@ -44,7 +44,7 @@ const Metrics = () => {
           weightLost: weightLost,
         });
 
-        const goalsRes = await axios.get(`http://localhost:5000/api/goals/${userId}`);
+        const goalsRes = await axios.get(`https://group01-1.onrender.com/api/goals/${userId}`);
         const scatterPoints = goalsRes.data.map((goal) => ({
           x: goal.distance,
           y: goal.distance * (caloriesBurned / totalDistance),
